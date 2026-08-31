@@ -1,0 +1,163 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Header Minimalis */
+.pm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px;
+    background-color: #fff;
+}
+
+.logo a {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.pm-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.pm-nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase; /* Membuat teks menu kapital semua */
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.pm-nav a:hover {
+    color: #7f8c8d; /* Berubah abu-abu saat disentuh mouse */
+}
+
+/* Judul Halaman */
+.page-title {
+    padding: 0 50px 30px 50px;
+}
+
+.page-title h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #000;
+}
+
+/* Grid Foto (Seamless 4 Kolom) */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Membagi lurus menjadi 4 kolom */
+    width: 100%;
+}
+
+.photo-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Memaksa semua foto menjadi kotak sempurna */
+    object-fit: cover; /* Agar foto tidak gepeng */
+    display: block;
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    .pm-header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .pm-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Berubah jadi 2 kolom di HP */
+    }
+    
+    .page-title {
+        text-align: center;
+        padding: 0 20px 20px 20px;
+    }
+}
+/* Gaya Galeri Model Berita */
+.news-gallery-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 50px 50px 50px;
+}
+
+.headline-item {
+    margin-bottom: 40px;
+}
+
+/* Foto utama memanjang dan besar */
+.headline-item img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover; /* Mencegah gambar gepeng */
+    margin-bottom: 15px;
+}
+
+.headline-text h3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.headline-text p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Membagi foto kecil menjadi 3 kolom */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Format layar lebar */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.news-card h4 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    .news-gallery-container {
+        padding: 0 20px 20px 20px;
+    }
+    .headline-item img {
+        height: 250px; /* Foto utama lebih pendek di HP */
+    }
+    .news-grid {
+        grid-template-columns: 1fr; /* Foto kecil otomatis turun ke bawah (1 kolom) */
+    }
+}
