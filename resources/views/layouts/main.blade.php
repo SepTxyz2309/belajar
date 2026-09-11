@@ -13,11 +13,14 @@
         <div class="logo">
             <a href="{{ url('/') }}">WAHYU SEPTIAN</a>
         </div>
-        <nav class="pm-nav">
+       <nav class="pm-nav">
             <ul>
-                <li><a href="{{ url('/') }}">PORTRAITS</a></li>
-                <li><a href="{{ url('/jurnal-foto') }}">JURNAL FOTO</a></li>
-                <li><a href="{{ url('/sport') }}">SPORT</a></li>
+                <li><a href="{{ url('/') }}">Beranda</a></li>
+                <li><a href="{{ url('/sport') }}">Sport</a></li>
+                <li><a href="#">THINGS</a></li>
+                <li><a href="#">CLIENTS</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONNECT</a></li>
             </ul>
         </nav>
     </header>
